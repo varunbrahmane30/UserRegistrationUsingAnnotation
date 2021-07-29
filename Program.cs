@@ -7,6 +7,7 @@ namespace Day22_UserRegistrationUsingAnnotation
         static void Main(string[] args)
         {
             Console.WriteLine(" User Registration Problem Using Annotations ");
+            AnnotationForUser.Display();
         }
     }
 }
