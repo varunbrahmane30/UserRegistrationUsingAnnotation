@@ -37,7 +37,6 @@ namespace Day22_UserRegistrationUsingAnnotation
             objEmployee.mobileNo = mobNo;
             objEmployee.Password = pass;
 
-
             ValidationContext context = new ValidationContext(objEmployee, null, null);
             List<ValidationResult> results = new List<ValidationResult>();
 
