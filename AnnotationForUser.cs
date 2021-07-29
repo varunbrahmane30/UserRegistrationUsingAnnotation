@@ -15,11 +15,15 @@ namespace Day22_UserRegistrationUsingAnnotation
             Employee objEmployee = new Employee();
 
 
-            Console.WriteLine("Enter a Name : ");
+            Console.WriteLine("Enter a First Name : ");
             String firstName = Console.ReadLine();
 
-            objEmployee.Name = firstName;
-            
+            Console.WriteLine("Enter a Last Name : ");
+            String lastName = Console.ReadLine();
+
+            objEmployee.lName = lastName;
+            objEmployee.fName = firstName;
+
             ValidationContext context = new ValidationContext(objEmployee, null, null);
             List<ValidationResult> results = new List<ValidationResult>();
 
@@ -27,14 +31,13 @@ namespace Day22_UserRegistrationUsingAnnotation
             if (!valid)
             {
                 foreach (ValidationResult TotalResult in results)
-                {
-                    Console.WriteLine("Member Name : {0}", TotalResult.MemberNames.First(), Environment.NewLine);
+                { 
                     Console.WriteLine("Error Msg : {0}{1}", TotalResult.ErrorMessage, Environment.NewLine);
                 }
             }
             else
             {
-                Console.WriteLine("Name: " + objEmployee.Name);
+                Console.WriteLine(" First Name: " + objEmployee.fName + "\n Last Name : " + objEmployee.lName);
             }
             Console.WriteLine("\nPress any key to exit");
             Console.ReadKey();
