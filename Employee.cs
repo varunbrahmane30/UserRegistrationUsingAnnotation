@@ -30,7 +30,7 @@ namespace Day22_UserRegistrationUsingAnnotation
         public string mobileNo { get; set; }
 
         [Required(ErrorMessage = "Password is required")]
-        [RegularExpression(@"^*(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$*", ErrorMessage = "Entered Password must have minimum 8 charactors.")]
+        [RegularExpression(@"^*(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$", ErrorMessage = "Entered Password must have minimum 8 charactors.")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
