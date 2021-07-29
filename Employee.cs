@@ -19,6 +19,11 @@ namespace Day22_UserRegistrationUsingAnnotation
         [DataType(DataType.Text)]
         public string lName { get; set; }
 
+        [Required(ErrorMessage = "The Email field is required.")]
+        [EmailAddress(ErrorMessage = "The Email field is not a valid e-mail address.")]
+        [DataType(DataType.EmailAddress)]
+        public string email { get; set; }
+
 
     }
 
