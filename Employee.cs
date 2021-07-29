@@ -24,6 +24,11 @@ namespace Day22_UserRegistrationUsingAnnotation
         [DataType(DataType.EmailAddress)]
         public string email { get; set; }
 
+        [Required(ErrorMessage = "Mobile Number Required!")]
+        [RegularExpression(@"(0|91)?[ ][6-9][0-9]{9}$",ErrorMessage = "Entered mobile number format is not valid.")]
+        [DataType(DataType.PhoneNumber)]
+        public string mobileNo { get; set; }
+
 
     }
 

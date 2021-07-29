@@ -25,9 +25,15 @@ namespace Day22_UserRegistrationUsingAnnotation
             Console.WriteLine("Enter a Email Address: ");
             String email = Console.ReadLine();
 
+            Console.WriteLine("Enter a Mobile NO: ");
+            String mobNo = Console.ReadLine();
+
+
             objEmployee.fName = firstName;
             objEmployee.lName = lastName;
             objEmployee.email = email;
+            objEmployee.mobileNo = mobNo;
+
 
 
             ValidationContext context = new ValidationContext(objEmployee, null, null);
@@ -43,7 +49,7 @@ namespace Day22_UserRegistrationUsingAnnotation
             }
             else
             {
-                Console.WriteLine(" First Name: " + objEmployee.fName + "\n Last Name : " + objEmployee.lName + "\n Email Address : " + objEmployee.email);
+                Console.WriteLine(" First Name: " + objEmployee.fName + "\n Last Name : " + objEmployee.lName + "\n Email Address : " + objEmployee.email + "\n Mobile Number  : " + objEmployee.mobileNo);
             }
             Console.WriteLine("\nPress any key to exit");
             Console.ReadKey();
